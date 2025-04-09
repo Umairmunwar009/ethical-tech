@@ -1,12 +1,12 @@
 import React from 'react';
 import '../styles/HomePage.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+// import Navbar from '../components/Navbar';
+// import Footer from '../components/Footer';
 
 const HomePage = () => {
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <header className="hero-section">
                 <img src="path/to/hero-image.jpg" alt="Welcome to Ethical Tech" />
                 <h1>Welcome to Ethical Tech</h1>
@@ -27,7 +27,7 @@ const HomePage = () => {
                 <h2>About Us</h2>
                 <p>We promote awareness about ethical technology and its impact on society.</p>
             </section>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };
