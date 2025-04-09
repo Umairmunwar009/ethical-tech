@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './NewsPage.css';
+import '../styles/NewsPage.css';
 
 const NewsPage = () => {
     const [newsArticles, setNewsArticles] = useState([]);

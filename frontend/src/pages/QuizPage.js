@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import QuizTimer from '../components/QuizTimer';
 import ProgressTracker from '../components/ProgressTracker';
-import './QuizPage.css';
+import '../styles/QuizPage.css';
 
 const QuizPage = () => {
     const { quizId } = useParams();
