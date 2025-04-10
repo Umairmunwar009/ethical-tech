@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import '../styles/LoginPage.css';
+import '../styles/AuthPage.css';
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
@@ -58,9 +58,6 @@ const LoginPage = () => {
                 <button type="submit">Login</button>
                 <p>
                     <a href="/signup">Don't have an account? Sign up</a>
-                </p>
-                <p>
-                    <a href="/forgot-password">Forgot Password?</a>
                 </p>
             </form>
         </div>
