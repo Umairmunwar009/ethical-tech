@@ -6,7 +6,6 @@ import '../styles/HomePage.css';
 const HomePage = () => {
     return (
         <div>
-            {/* <Navbar /> */}
             <header className="hero-section">
                 <img src="path/to/hero-image.jpg" alt="Welcome to Ethical Tech" />
                 <h1>Welcome to Ethical Tech</h1>
