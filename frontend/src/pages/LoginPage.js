@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-// import '../styles/LoginPage.css';
+import '../styles/LoginPage.css';
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
@@ -35,7 +35,6 @@ const LoginPage = () => {
 
     return (
         <div className="login-container">
-            <h2>Login</h2>
             {error && <p className="error">{error}</p>}
             <form onSubmit={handleLogin}>
                 <div>
