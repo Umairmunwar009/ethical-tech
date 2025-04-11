@@ -1,3 +1,6 @@
+import React from 'react';
+import '../styles/NewsPage.css';
+
 const NewsPage = () => {
     return (
         <div className="news-page">
@@ -44,6 +47,8 @@ const NewsPage = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Articles Info Section */}
             <section className="articles-info">
                 <h2>Articles Info</h2>
                 <ul>
@@ -53,6 +58,11 @@ const NewsPage = () => {
                     <li><a href="#">Article 4: How to Stay Safe Online</a></li>
                 </ul>
             </section>
+
+            {/* Back to Top Button */}
+            <button className="back-to-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                ↑ Back to Top
+            </button>
         </div>
     );
 };

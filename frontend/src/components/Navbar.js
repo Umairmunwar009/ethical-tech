@@ -11,7 +11,7 @@ const Navbar = () => {
                 <li><Link to="/news">News & Articles</Link></li>
                 <li><Link to="/tech-insights">Tech Insights</Link></li>
                 <li><Link to="/quizzes">Quizzes</Link></li>
-                <li><Link to="/login">Login/Sign Up</Link></li>
+                <li><Link to="/auth">Login/SignUp</Link></li> {/* Updated link */}
             </ul>
         </nav>
     );

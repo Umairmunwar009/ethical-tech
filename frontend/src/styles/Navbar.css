@@ -1,9 +1,11 @@
 .navbar {
-    position: sticky;
+    position: fixed; /* Make the navbar fixed at the top */
     top: 0;
+    left: 0;
+    width: 100%; /* Ensure it spans the full width */
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 1000; /* Ensure it stays above other elements */
 }
 
 .navbar-container {
@@ -36,28 +38,11 @@
     color: #007bff;
 }
 
-@media (max-width: 768px) {
-    .navbar-links {
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #ffffff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        display: none; /* Initially hidden */
-    }
-
-    .navbar-links.active {
-        display: flex; /* Show when active */
-    }
-
-    .navbar-toggle {
-        display: block;
-        cursor: pointer;
-    }
+.navbar-link.active {
+    font-weight: bold;
+    color: #007bff;
 }
 
-.navbar-toggle {
-    display: none;
+body {
+    padding-top: 60px; /* Add padding to prevent content from overlapping the navbar */
 }
