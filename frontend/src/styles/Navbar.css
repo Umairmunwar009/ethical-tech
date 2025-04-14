@@ -1,11 +1,11 @@
 .navbar {
-    position: fixed; /* Make the navbar fixed at the top */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Ensure it spans the full width */
+    width: 100%;
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensure it stays above other elements */
+    z-index: 1000;
 }
 
 .navbar-container {
@@ -43,6 +43,13 @@
     color: #007bff;
 }
 
+@media (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 body {
-    padding-top: 60px; /* Add padding to prevent content from overlapping the navbar */
+    padding-top: 60px; /* Prevent content overlap with navbar */
 }

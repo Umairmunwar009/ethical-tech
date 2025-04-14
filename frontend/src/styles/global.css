@@ -6,6 +6,7 @@ body {
     min-height: 100vh; /* Ensure the body takes up the full viewport height */
     line-height: 1.6;
     padding-bottom: 60px; /* Add padding to prevent overlap with the footer */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 a {
@@ -60,6 +61,9 @@ main {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer {

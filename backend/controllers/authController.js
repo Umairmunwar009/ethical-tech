@@ -1,17 +1,26 @@
 const User = require('../models/User');
+const jwt = require('jsonwebtoken');
 
+// Signup Controller
 exports.signup = async (req, res) => {
-    const { email, password } = req.body;
+    const { name, email, password } = req.body;
 
     try {
-        const newUser = new User({ email, password });
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ message: 'Email already in use' });
+        }
+
+        const newUser = new User({ name, email, password });
         await newUser.save();
-        res.status(201).json({ message: 'User created successfully' });
+
+        res.status(201).json({ message: 'User registered successfully' });
     } catch (error) {
-        res.status(400).json({ message: 'Error creating user', error });
+        res.status(500).json({ message: 'Error registering user', error });
     }
 };
 
+// Login Controller
 exports.login = async (req, res) => {
     const { email, password } = req.body;
 
@@ -20,7 +29,11 @@ exports.login = async (req, res) => {
         if (!user || !(await user.comparePassword(password))) {
             return res.status(401).json({ message: 'Invalid email or password' });
         }
-        res.status(200).json({ message: 'Login successful', user });
+
+        // Generate JWT
+        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+
+        res.status(200).json({ message: 'Login successful', token });
     } catch (error) {
         res.status(500).json({ message: 'Error logging in', error });
     }
